@@ -167,7 +167,7 @@ class Gen:
         self.num2=int(num2)
         letter_num=num%self.num2
         line_num=num//self.num2
-        new_letter=Label(text="[]",background="light gray")
+        new_letter=Label(text="[]",background="light gray",width=1)
         new_letter.grid(row=line_num,column=((letter_num)*2)+1)
         self.placements[line_num].append(new_letter)
         for i in range(0,(self.num2)*2,2):
@@ -178,7 +178,7 @@ class Gen:
         l = Label(background="light gray", text="_")
         l.grid(row=99, column=(self.num2*2))
     def gen_alpha(self,col):
-        new_keyboard_letter=Label(text=self.alphabet[col],background='light gray',font=("arial",6))
+        new_keyboard_letter=Label(text=self.alphabet[col],background='light gray',font=("arial",6),width=1)
         self.alpha[self.alphabet[col]]=new_keyboard_letter
         self.alpha2[self.alphabet[col]] = new_keyboard_letter
         col+=1
