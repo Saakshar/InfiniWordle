@@ -251,9 +251,9 @@ class Gen:
         self.status="over"
         self.input.destroy()
         self.btn.destroy()
-        self.end.grid(row=6, column=0, columnspan=12)
+        self.end.grid(row=6, column=0, columnspan=self.num2*2)
         self.refresh=Button(text="Click to Play Again",font=("arial",7,"italic"),command=self.replay)
-        self.refresh.grid(row=7,column=0,columnspan=12)
+        self.refresh.grid(row=7,column=0,columnspan=self.num2*2)
         if self.ez:
             dif="easy"
         else:
